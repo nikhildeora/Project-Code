@@ -1,35 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Self Drive Car Rental</title>
+    <script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./home.css">
 
 </head>
+
 <body>
+    <!-- navbar div  -->
     <div id="navbar">
-        <div id="logo">
-            <h1>Zoom car/my car</h1>
+        <div>
+            <h3><i class="fa-solid fa-bars"></i></h3>
+            <img src="https://www.zoomcar.com/build/98e56e8b0b91e8806885a22ac2bf69a7.png" alt="ZOOMCAR">
         </div>
         <div>
-            <a href=""><h2>Become a Host</h2></a>
-            <a href=""><h2>ZMS</h2></a>
-            <a href=""><h2>sign up</h2></a>
-            <a href=""><h2>login</h2></a>
+            <h2>Become a Host</h2>
+            <h2>ZMS</h2>
+            <div>
+                <a href="">
+                    <h2>Signup</h2>
+                </a>
+                <a href="">
+                    <h2>Login</h2>
+                </a>
+            </div>
         </div>
-        <form action="">
-            <input type="text" name="" id="">
-            <input type="submit">
-        </form>
-        <select name="" id="more">
-            <option value="">zoom car</option>
-            <option value="">zoom car</option>
-            <option value="">zoom car</option>
-        </select>
     </div>
+
+    <!-- nav background image and form section  -->
+    <div id="navimage">
+        <img src="https://zoomcar-assets.zoomcar.com/images/original/a121667db0d5e435e48884b015120bc180a4ad2f.jpg?1661426287"
+            alt="">
+        <div id="form">
+            <div>
+                <div>
+                    <p><i class="fa-solid fa-arrow-right-arrow-left"></i></p>
+                    <p>Round Trip</p>
+                </div>
+                <div>
+                    <p><i class="fa-solid fa-plane"></i></p>
+                    <p>Airoplane Round Trip</p>
+                </div>
+            </div>
+            <div>
+                <form action="">
+                    <select name="location" id="location">
+                        <option value="">Pick Up Location</option>
+                        <option value="T2 - International Airport (P7 parking lot)">T2 - International Airport (P7
+                            parking lot)</option>
+                        <option value="Mumbai central railway station west">Mumbai central railway station west
+                        </option>
+                        <option value="Chirner road, sector 21, Navi Mumbai">Chirner road, sector 21, Navi Mumbai
+                        </option>
+                        <option value="Sector 30, CBD Belapur, Navi Mumbai">Sector 30, CBD Belapur, Navi Mumbai</option>
+                        <option value="Matoshri Kamala Devi Marg, Nerul">Matoshri Kamala Devi Marg, Nerul</option>
+                        <option value="Reti Bunder Road, Ulwe, Navi Mumbai">Reti Bunder Road, Ulwe, Navi Mumbai</option>
+                        <option value="Vitthal Rukmani Mandir, Nerul">Vitthal Rukmani Mandir, Nerul</option>
+                        <option value="Suvarna Waterfall, Jasai, Ulwe">Suvarna Waterfall, Jasai, Ulwe</option>
+                        <option value="Ramseth Thakur International Sport Club">Ramseth Thakur International Sport Club
+                        </option>
+                        <option value="Nhava road, Nhava, Navi Mumbai">Nhava road, Nhava, Navi Mumbai</option>
+                        <option value="Rajmahal South India restaurent, Navi Mumbai">Rajmahal South India restaurent,
+                            Navi Mumbai</option>
+                    </select>
+
+                    <div class="formDiv">
+                        <label for="fromDate" class="pick-up">Pick Up Date</label>
+                        <input type="date" id="fromDate">
+                    </div>
+                    <div class="formDiv">
+                        <label for="toDate" class="drop-off">Drop Off Date</label>
+                        <input type="date" id="toDate">
+                    </div>
+
+                </form>
+                <!-- <button><a href="sample.html">Find Cars</a></button> -->
+                <a href="">Find Cars</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- addvertisement section  -->
+    <div id="advertise">
+        <div id="first-add">
+            <div>
+                <div>
+                    <h3>You and your buddy up for a long drive?</h3>
+                    <p> You earn 500 in Z-Points. Your friend gets 20% off on first booking</p>
+                </div>
+                <div>
+                    <img src="https://zoomcar-assets.zoomcar.com/images/original/207f2f9653395ea8b5b5acf04cd722aa1b88b0f0.png?1661344619"
+                        alt="error">
+                </div>
+            </div>
+            <div>
+                <i class="fa-solid fa-arrow-right"></i>
+                <h4>REFER FREINDS</h4>
+            </div>
+        </div>
+
+        <div id="second-add">
+            <div>
+                <h1>UP TO 20% OFF</h1>
+                <p>on your first booking from the app!</p>
+                <h3>Use Code: ZOOMNEW</h3>
+                <h2>Install Zoomcar App now!</h2>
+            </div>
+            <div>
+                <img src="https://www.zoomcar.com/img/cellphone.png
+                " alt="error">
+            </div>
+        </div>
+    </div>
+
+    <!-- about us line -->
+    <div id="aboutus">
+        <p>About us <i class="fa-sharp fa-solid fa-sort-down"></i></p>
+        <i class="fa-solid fa-sort-up"></i>
+        <ul type="none">
+            <li>Zoomcar Team</li>
+            <li>Zoomcar Suscription</li>
+            <li>Zoomcar Blog</li>
+            <li>Carrer @ Zoomcar</li>
+        </ul>
+    </div>
+
+    <!-- text section  -->
+    <div id="text">
+        <div>
+            <div class="cards">
+                <h4>SELF DRIVE CARS IN MUMBAI</h4>
+                <p>The financial capital of India, Mumbai is a city which never sleeps. Buzzing with activity, it also
+                    holds the distinction of being the entertainment hub of the country. With a beach in its backyard
+                    and the picturesque Western Ghats a stone's throw away, the city attracts visitors from all over the
+                    word. From the Gateway of India which opens the doors to India's mysteries, to the ancient caves of
+                    Elephanta Island, and from the iconic Stock Exchange to the many studios where Bollywood movies are
+                    made, the city offers a multitude of sights and experiences. The downside of life in Mumbai is the
+                    difficulty commuting poses. Overloaded public transport and increasing distances add to the stress
+                    of living in Mumbai. Whether you are a visitor to this melting-pot of cultures, or a resident of the
+                    city, it is important to have a self-drive car at your disposal to make the most of your time. If
+                    you do not plan to buy a car of your own, Zoomcar offers the perfect solution by making the process
+                    of self- drive car booking in Mumbai convenient and affordable. The Zoomcar app allows you the
+                    freedom of booking a car at your fingertips.</p>
+            </div>
+            <div class="cards">
+                <h4>CAR ON RENT IN MUMBAI</h4>
+                <p>On many occasions, working professionals and business persons want to commute to different parts of
+                    the city in the same day. Usually, they hire a chauffeur driven car and pay extra for the waiting
+                    charges. This option, while popular, is also more expensive. It is more economical to opt for a
+                    self-drive car rental in Mumbai. You can spend any amount of time at a meeting without having to
+                    worry about the waiting charges, and use the car to explore Mumbai after work at your leisure.
+                    Zoomcar also provides Mumbai Airport Taxi service, using which you can pick up one of our cars right
+                    at the airport when you land. We have a variety of cars in our fleet including luxury brands which
+                    makes it easier to book luxury cars on rent in Mumbai.</p>
+            </div>
+            <div class="cards">
+                <h4>CAR RENTAL IN MUMBAI</h4>
+                <p>An ideal way to relax after a stressful week at the office is to go on a long drive from Mumbai to
+                    Pune or from Mumbai to Nasik. Enjoy the drive on the wide 6-lane Mumbai - Pune expressway with your
+                    loved ones by taking a car on hire in Mumbai. There are many religious sites, parks, and museums in
+                    Nasik which makes it an ideal location to unwind.</p>
+            </div>
+            <div class="cards">
+                <h4>ABOUT ZOOMCAR</h4>
+                <p>No more worries about petrol mileage, insurance, and car breakdowns! Zoomcar has enabled driving
+                    convenience for travellers around the country and is fast expanding its reach to cities including
+                    Ahmedabad, Bangalore, Chandigarh, Chennai, Coimbatore, Delhi-NCR, Hyderabad, Jaipur, Kochi, Kolkata,
+                    Ludhiana, Mangalore, Mumbai, Mysore, Pune, Siliguri and Vizag. Self-drive cars from Zoomcar have
+                    given customers more control, privacy, and freedom. Book a self-drive car in any city you visit with
+                    the Zoomcar app on your phone and feel at home wherever you go.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer section  -->
+    <div id="footer">
+        <div>
+            <img src="https://www.zoomcar.com/build/6b51f1464b17dbb1d002f16e26572662.png" alt="">
+        </div>
+    </div>
+    <p> © Copyright 2022 Zoomcar India Private Ltd. All rights reserved</p>
+
 </body>
+
 </html>
 
 <script src="./home.js"></script>
