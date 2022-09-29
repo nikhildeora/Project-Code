@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Login page</title>
+    <style>
+        * {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        #login {
+            width: 30%;
+            margin: auto;
+            margin-top: 40px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #login img {
+            width: 100%;
+        }
+
+        input {
+            padding: 10px;
+            margin-top: 8px;
+            font-size: 15px;
+            border: none;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        }
+
+        input[type="submit"] {
+            background-color: #18a310;
+            color: white;
+            font-size: 18px;
+            border-radius: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            color: #a8a8a8;
+        }
+        #welcome{
+            display: none;
+        }
+
+        #welcome{
+            font-size: 25px;
+            margin-top: 22px;
+            margin-bottom: 22px;
+            font-weight: bold;
+            text-decoration: none;
+            text-align: center;
+            color: black;
+        }
+
+        span {
+            background-color: #18a310;
+            color: white;
+            padding: 12px 15px;
+            border-radius: 22px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="login">
+        <a id="welcome" href="welcome.html"> <span>Welcome</span> <i class="fa-solid fa-arrow-left-long"></i>Click here </a>
+        <h2>Fill Details for Login</h2>
+        <a href="home.html"> <img src="https://www.zoomcar.com/build/fb65fcc43b8bededb813e093ea2d47d3.svg" alt=""></a>
+        <form action="">
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Your password">
+            <input type="submit">
+        </form>
+    </div>
+</body>
+
+</html>
+
+<script>
+    let signupdata = JSON.parse(localStorage.getItem("user-details"))
+    let form = document.querySelector("form")
+    form.addEventListener("submit", loginevent)
+
+    function loginevent(event) {
+        event.preventDefault()
+        let data = {
+            username: form.username.value,
+            password: form.password.value
+        }
+
+        correctCred()
+        function correctCred() {
+            if(signupdata==null){
+                alert("Invalid Credentials")
+                return
+            }
+            for (let x = 0; x < signupdata.length; x++) {
+                if (signupdata[x].username == data.username && signupdata[x].password == data.password) {
+                    document.querySelector("#welcome").style.display = "block"
+                    return
+                }
+            }
+            alert("Invalid Credentials")
+        }
+
+
+    }
+</script>
