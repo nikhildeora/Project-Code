@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>sign up page</title>
+    <style>
+        * {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        #signup {
+            width: 30%;
+            margin: auto;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #signup>a>img {
+            width: 100%;
+        }
+
+        #signup>div {
+            display: flex;
+            width: 67%;
+            color: #18a310;
+        }
+
+        hr {
+            color: #18a310;
+        }
+
+        input {
+            padding: 10px;
+            margin-top: 8px;
+            font-size: 15px;
+            border: none;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        }
+
+        input[type="submit"] {
+            background-color: #18a310;
+            color: white;
+            font-size: 18px;
+            border-radius: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            color: #a8a8a8;
+        }
+
+        #loginpage {
+            display: none;
+        }
+
+        #loginpage {
+            font-size: 25px;
+            margin-top: 22px;
+            margin-bottom: 22px;
+            font-weight: bold;
+            text-decoration: none;
+            text-align: center;
+            color: black;
+        }
+
+        span {
+            background-color: #18a310;
+            color: white;
+            padding: 12px 15px;
+            border-radius: 22px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="signup">
+        <a id="loginpage" href="login.html"> <span>Login Now</span> <i class="fa-solid fa-arrow-left-long"></i>Click
+            here </a>
+        <h2>Fill Your Details for Sign Up</h2>
+        <a href="home.html"><img src="https://www.zoomcar.com/build/fb65fcc43b8bededb813e093ea2d47d3.svg" alt=""></a>
+
+        <form action="">
+            <input type="text" id="username" placeholder="Username">
+            <input type="text" id="name" placeholder="Your full Name">
+            <input type="number" id="mobile" placeholder="Your Mobile Number">
+            <input type="email" id="email" placeholder="Your email id">
+            <input type="password" id="password" placeholder="Your password">
+            <input type="submit">
+        </form>
+        <hr>
+        <div>
+            <h3>Continue via Social</h3>
+            <img src="https://www.zoomcar.com/build/62ba375ec1a9fbcbee9e9099181c8d38.svg" alt="">
+            <img src="https://www.zoomcar.com/build/279de03b0c8ecdb4db56a79da6e775e6.svg" alt="">
+        </div>
+        <hr>
+    </div>
+</body>
+
+</html>
+
+<script>
+    let form = document.querySelector("form")
+    form.addEventListener("submit", sigupevent)
+    let finalArr = JSON.parse(localStorage.getItem("user-details")) || [];
+
+    function sigupevent(event) {
+        event.preventDefault()
+
+        let data = {
+            username: form.username.value,
+            name: form.name.value,
+            mobile: form.mobile.value,
+            email: form.email.value,
+            password: form.password.value
+        }
+        let finaldata = {}
+
+        function checkExist() {
+            let temp = JSON.parse(localStorage.getItem("user-details")) || []
+            if (temp.length == 0) {
+                return false
+            }
+            for (let x = 0; x < temp.length; x++) {
+                if (temp[x].username == data.username) {
+                    return true
+                }
+            }
+            return false
+        }
+
+
+        if (data.username == "" || data.name == "" || data.mobile == "" || data.email == "" || data.password == "") {
+            alert("please fill all details")
+        }
+        else if (checkExist()) {
+            alert("Username Already Exist")
+        }
+        else {
+            finaldata.username = data.username;
+            finaldata.password = data.password;
+            finalArr.push(finaldata)
+            localStorage.setItem("user-details", JSON.stringify(finalArr))
+
+            document.querySelector("#loginpage").style.display = "block"
+        }
+
+    }
+</script>
