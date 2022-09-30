@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./carlist.css">
+    <title>Car list</title>
+
+</head>
+
+<body>
+    <!-- navbar div  -->
+    <div id="navbar">
+        <div>
+            <h3><i class="fa-solid fa-bars"></i></h3>
+            <a href="home.html"> <img src="https://www.zoomcar.com/build/98e56e8b0b91e8806885a22ac2bf69a7.png"
+                    alt="ZOOMCAR"></a>
+        </div>
+        <div>
+            <h2>Become a Host</h2>
+            <h2>ZMS</h2>
+            <div>
+                <a href="signup.html">
+                    <h2>Signup</h2>
+                </a>
+                <a href="login.html">
+                    <h2>Login</h2>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- body code  -->
+    <div id="main">
+        <div id="first">
+            <div>
+                <p>Sort & Filters</p>
+                <p>Reset</p>
+            </div>
+            <p>Sort By</p>
+            <div id="sortBox">
+                <div class="cards" id="relevance">
+                    <h3><i class="fa-solid fa-circle-check"></i></h3>
+                    <p>relevance</p>
+                </div>
+                <div class="cards" id="low-to-high">
+                    <h3><i class="fa-solid fa-arrow-down"></i></h3>
+                    <p>Low-To-High</p>
+                </div>
+                <div class="cards" id="high-to-low">
+                    <h3><i class="fa-solid fa-arrow-up"></i></h3>
+                    <p>High-To-Low</p>
+                </div>
+                <div class="cards" id="best-rated">
+                    <h3><i class="fa-regular fa-star"></i></h3>
+                    <p>Best-Rated</p>
+                </div>
+                <div class="cards" id="distance">
+                    <h3><i class="fa-solid fa-location-dot"></i></h3>
+                    <p>Distance</p>
+                </div>
+                <div class="cards" id="car-age">
+                    <h3><i class="fa-sharp fa-solid fa-circle-notch"></i></h3>
+                    <p>Car-Age</p>
+                </div>
+                <div class="cards" id="kms-driven">
+                    <h3><i class="fa-solid fa-road"></i></h3>
+                    <p>Kms-Driven</p>
+                </div>
+                <div class="cards" id="popularity">
+                    <h3><i class="fa-brands fa-servicestack"></i></h3>
+                    <p>Popularity</p>
+                </div>
+            </div>
+            <hr>
+            <div id="search">
+                <p>Include Specific Cars</p>
+                <p>Any Specific model in mind? Find it here. We wll include them to search</p>
+                <input type="text" id="searchBar" placeholder="search here">
+                <button>Search</button>
+            </div>
+            <hr>
+        </div>
+
+
+        <div id="second">
+            <div id="date">
+                <div></div>
+                <div>
+                    <h4>Start Date :</h4> <span></span>
+                </div>
+                <div>
+                    <h4>End Date :</h4> <span></span>
+                </div>
+            </div>
+            <table>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
+
+<script src="./carlist.js"></script>

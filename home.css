@@ -26,6 +26,10 @@
     width: 190px;
 }
 
+#navbar>div:first-child>img:hover{
+    cursor: pointer;
+}
+
 #navbar>div:last-child {
     display: flex;
     justify-content: space-between;
