@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a627da3621.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <title>Car Summary </title>
@@ -72,7 +72,7 @@
         }
 
         /* main box css  */
-        #main{
+        #main {
             width: 74%;
             height: 600px;
             /* border: 1px solid black; */
@@ -81,37 +81,42 @@
             display: flex;
             justify-content: space-between;
         }
-        #pay{
+
+        #pay {
             width: 47%;
             height: 100%;
             /* border: 1px solid blue; */
         }
-        #detail{
+
+        #detail {
             width: 47%;
             height: 100%;
-            border: 1px solid red;
         }
-        #pay>div{
+
+        #pay>div {
             width: 100%;
             padding: 30px;
             height: 90%;
             margin-top: 20px;
             box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
             display: grid;
-            grid-template-columns: repeat(2,1fr);
-            grid-template-rows: repeat(6,70px);
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(6, 70px);
             /* column-gap: 70px; */
             color: #1f4a60;
         }
-        #pay>div>p{
+
+        #pay>div>p {
             border-bottom: 1px solid #1f4a60;
             margin-top: 10px;
             margin-bottom: 10px;
         }
-        #pay>div>p:nth-child(even){
+
+        #pay>div>p:nth-child(even) {
             text-align: right;
         }
-        #pay>div>a{
+
+        #pay>div>a {
             grid-area: 7/2 span/8/3;
             padding: 0px;
             margin-top: 12px;
@@ -125,6 +130,62 @@
             justify-content: center;
             align-items: center;
             text-decoration: none;
+        }
+
+        /* details css  */
+        #detail>div {
+            height: 69%;
+            width: 100%;
+            margin-top: 20px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        }
+
+        #detail img {
+            width: 45%;
+            padding: 0px;
+        }
+
+        #detail>div>div:first-child {
+            width: 100%;
+            height: 40%;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #detail>div>div>div {
+            width: 70%;
+            display: flex;
+            padding-left: 17px;
+            flex-direction: column;
+            gap: 12px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #pickup,
+        #start,
+        #end,
+        #fuel,
+        #star {
+            display: flex;
+            color: #0c1418;
+            gap: 5px;
+            padding-left: 6px;
+            padding: 12px;
+            margin-top: 4px;
+        }
+
+        #start>i {
+            color: green;
+        }
+
+        #end>i {
+            color: red;
+        }
+
+        #star>i {
+            color: gold;
         }
     </style>
 </head>
@@ -152,33 +213,56 @@
     </div>
 
     <div id="main">
-       <div id="pay">
-        <h2>Checkout Summary</h2>
-          <div>
-            <p>Trip Fare (Unlimited KMs without Fuel)</p>
-            <p><i class="fa-sharp fa-solid fa-indian-rupee-sign"></i><span></span></p>
-            <p>Damage Protection Fee</p>
-            <p>+ ₹290</p>
-            <p>Convenience Fee</p>
-            <p>+ ₹99</p>
-            <p>Total Fare</p>
-            <p><i class="fa-sharp fa-solid fa-indian-rupee-sign"></i><span></span></p>
-            <p>Refundable Deposit
-                Has been waived off for this booking</p>
-            <p>+ ₹0</p>
-            <p>Final Fare</p>
-            <p><i class="fa-sharp fa-solid fa-indian-rupee-sign"></i><span></span></p>
-            <!-- <button></button> -->
-            <a href="payment.html">PROCEED TO PAY <i class="fa-sharp fa-solid fa-indian-rupee-sign"></i><span></span></a>
-          </div>
-       </div>
+        <div id="pay">
+            <h2>Checkout Summary</h2>
+            <div>
+                <p>Trip Fare (Unlimited KMs without Fuel)</p>
+                <p><i class="fa-sharp fa-solid fa-indian-rupee-sign"></i><span></span></p>
+                <p>Damage Protection Fee</p>
+                <p>+ ₹290</p>
+                <p>Convenience Fee</p>
+                <p>+ ₹99</p>
+                <p>Total Fare</p>
+                <p><i class="fa-sharp fa-solid fa-indian-rupee-sign"></i><span></span></p>
+                <p>Refundable Deposit
+                    Has been waived off for this booking</p>
+                <p>+ ₹0</p>
+                <p>Final Fare</p>
+                <p><i class="fa-sharp fa-solid fa-indian-rupee-sign"></i><span></span></p>
+                <!-- <button></button> -->
+                <a href="payment.html">PROCEED TO PAY <i
+                        class="fa-sharp fa-solid fa-indian-rupee-sign"></i><span></span></a>
+            </div>
+        </div>
 
-       <div id="detail">
-          <h2>Booking Details</h2>
-          <div>
-            
-          </div>
-       </div>
+        <div id="detail">
+            <h2>Booking Details</h2>
+            <div>
+                <div>
+                    <div>
+                        <h2 id="carName"></h2>
+                        <p id="seats"></p>
+                    </div>
+                    <img src="" id="detailImg" alt="">
+                </div>
+
+                <div id="pickup"><i class="fa-solid fa-circle"></i>
+                    <h4>Pickup Location :</h4> <span></span>
+                </div>
+                <div id="start"><i class="fa-solid fa-circle"></i>
+                    <h4>Start Date :</h4><span></span>
+                </div>
+                <div id="end"><i class="fa-solid fa-circle"></i>
+                    <h4>End Date :</h4> <span></span>
+                </div>
+                <div id="fuel"><i class="fa-sharp fa-solid fa-road"></i>
+                    <p>Unlimited Kms without Fuel</p>
+                </div>
+                <div id="star"><i class="fa-solid fa-star"></i>
+                    <p></p>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 
@@ -186,17 +270,25 @@
 <script>
     let choosen = JSON.parse(localStorage.getItem("car-choose"))
     document.querySelector("#pay>div>p:nth-child(2)>span").innerText = choosen.Price
-    let payable = Number(choosen.Price)+290+99;
+    let payable = Number(choosen.Price) + 290 + 99;
     document.querySelector("#pay>div>p:nth-child(8)>span").innerText = payable
     document.querySelector("#pay>div>p:nth-child(12)>span").innerText = payable
     document.querySelector("#pay>div>a>span").innerText = payable
-    
-    
+
+
     document.querySelector("#pay>div>a").addEventListener("click", payAmount)
-    function payAmount(){
-        localStorage.setItem("pay-amount",payable)
+    function payAmount() {
+        localStorage.setItem("pay-amount", payable)
     }
 
-    
+    document.getElementById("carName").innerText = choosen.Name
+    document.getElementById("seats").innerText = choosen.Seats
+    document.getElementById("detailImg").src = choosen.Image
+    document.querySelector("#star>p").innerText = choosen.Star + "--" + "(" + choosen.Popularity + ")" + "--" + choosen["Km-drive"] + "K kms driven"
+
+    let dateData = JSON.parse(localStorage.getItem("Round-Trip"))
+    document.querySelector("#pickup>span").innerText = dateData.place
+    document.querySelector("#start>span").innerText = dateData.fromDate
+    document.querySelector("#end>span").innerText = dateData.toDate
 
 </script>
