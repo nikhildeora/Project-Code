@@ -1,12 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <title>Car Summary </title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* navbar css */
+        #navbar {
+            color: white;
+            background-color: black;
+            position: sticky;
+            top: 0px;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            z-index: 1;
+        }
+
+        #navbar>div:first-child {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 20%;
+            font-size: 1.4rem;
+        }
+
+        #navbar>div:first-child>img {
+            width: 190px;
+        }
+
+        #navbar>div:first-child>img:hover {
+            cursor: pointer;
+        }
+
+        #navbar>div:last-child {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 42%;
+            font-size: .9rem;
+        }
+
+        #navbar>div:last-child>h2:first-child {
+            background-color: white;
+            color: black;
+            border-radius: 16px;
+            padding: 5px 15px;
+        }
+
+        #navbar>div>div {
+            display: flex;
+            width: 25%;
+            justify-content: space-between;
+        }
+
+        #navbar>div>div>a {
+            text-decoration: none;
+            color: white;
+        }
+
+        /* main box css  */
+        #main{
+            width: 74%;
+            height: 600px;
+            /* border: 1px solid black; */
+            margin: auto;
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
+        }
+        #pay{
+            width: 47%;
+            height: 100%;
+            /* border: 1px solid blue; */
+        }
+        #detail{
+            width: 47%;
+            height: 100%;
+            border: 1px solid red;
+        }
+        #pay>div{
+            width: 100%;
+            padding: 30px;
+            height: 90%;
+            margin-top: 20px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(6,70px);
+            /* column-gap: 70px; */
+            color: #1f4a60;
+        }
+        #pay>div>p{
+            border-bottom: 1px solid #1f4a60;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        #pay>div>p:nth-child(even){
+            text-align: right;
+        }
+        #pay>div>a{
+            grid-area: 7/2 span/8/3;
+            padding: 0px;
+            margin-top: 12px;
+            background-color: #47b847;
+            color: white;
+            border: none;
+            border-radius: 15px;
+            font-size: 17px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>car summary </h1>
+    <!-- navbar div  -->
+    <div id="navbar">
+        <div>
+            <h3><i class="fa-solid fa-bars"></i></h3>
+            <a href="home.html"> <img src="https://www.zoomcar.com/build/98e56e8b0b91e8806885a22ac2bf69a7.png"
+                    alt="ZOOMCAR"></a>
+        </div>
+        <div>
+            <h2>Become a Host</h2>
+            <h2>ZMS</h2>
+            <div>
+                <a href="signup.html">
+                    <h2>Signup</h2>
+                </a>
+                <a href="login.html">
+                    <h2>Login</h2>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="main">
+       <div id="pay">
+        <h2>Checkout Summary</h2>
+          <div>
+            <p>Trip Fare (Unlimited KMs without Fuel)</p>
+            <p><i class="fa-sharp fa-solid fa-indian-rupee-sign"></i><span></span></p>
+            <p>Damage Protection Fee</p>
+            <p>+ ₹290</p>
+            <p>Convenience Fee</p>
+            <p>+ ₹99</p>
+            <p>Total Fare</p>
+            <p><i class="fa-sharp fa-solid fa-indian-rupee-sign"></i><span></span></p>
+            <p>Refundable Deposit
+                Has been waived off for this booking</p>
+            <p>+ ₹0</p>
+            <p>Final Fare</p>
+            <p><i class="fa-sharp fa-solid fa-indian-rupee-sign"></i><span></span></p>
+            <!-- <button></button> -->
+            <a href="payment.html">PROCEED TO PAY <i class="fa-sharp fa-solid fa-indian-rupee-sign"></i><span></span></a>
+          </div>
+       </div>
+
+       <div id="detail">
+          <h2>Booking Details</h2>
+          <div>
+            
+          </div>
+       </div>
+    </div>
 </body>
+
 </html>
+<script>
+    let choosen = JSON.parse(localStorage.getItem("car-choose"))
+    document.querySelector("#pay>div>p:nth-child(2)>span").innerText = choosen.Price
+    let payable = Number(choosen.Price)+290+99;
+    document.querySelector("#pay>div>p:nth-child(8)>span").innerText = payable
+    document.querySelector("#pay>div>p:nth-child(12)>span").innerText = payable
+    document.querySelector("#pay>div>a>span").innerText = payable
+    
+    
+    document.querySelector("#pay>div>a").addEventListener("click", payAmount)
+    function payAmount(){
+        localStorage.setItem("pay-amount",payable)
+    }
+
+    
+
+</script>
