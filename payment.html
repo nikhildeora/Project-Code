@@ -1,12 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a627da3621.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <title>payment page</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* navbar css */
+        #navbar {
+            color: white;
+            background-color: black;
+            position: sticky;
+            top: 0px;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            z-index: 1;
+        }
+
+        #navbar>div:first-child {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 20%;
+            font-size: 1.4rem;
+        }
+
+        #navbar>div:first-child>img {
+            width: 190px;
+        }
+
+        #navbar>div:first-child>img:hover {
+            cursor: pointer;
+        }
+
+        #navbar>div:last-child {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 42%;
+            font-size: .9rem;
+        }
+
+        #navbar>div:last-child>h2:first-child {
+            background-color: white;
+            color: black;
+            border-radius: 16px;
+            padding: 5px 15px;
+        }
+
+        #navbar>div>div {
+            display: flex;
+            width: 25%;
+            justify-content: space-between;
+        }
+
+        #navbar>div>div>a {
+            text-decoration: none;
+            color: white;
+        }
+
+        /* bycard css */
+        #byCard{
+            width: 50%;
+            height: 300px;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+            margin: auto;
+            margin-top: 20px;
+            padding: 14px;
+        }
+        #byCard>h3{
+            text-align: center;
+        }
+        input{
+            display: block;
+            width: 40%;
+            margin: auto;
+            margin-top: 12px;
+            padding: 12px;
+            font-size: 17px;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+            border: none;
+        }
+        #upi{
+            width: 50%;
+            height: 190px;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+            margin: auto;
+            margin-top: 50px;
+            padding: 14px;
+        }
+        #upi>h3{
+            text-align: center;
+        }
+        input[type="submit"]{
+            border-radius: 20px;
+        }
+        input[type="submit"]:hover{
+            background-color: #47b847;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>welcome to payment page</h1>
+    <!-- navbar div  -->
+    <div id="navbar">
+        <div>
+            <h3><i class="fa-solid fa-bars"></i></h3>
+            <a href="home.html"> <img src="https://www.zoomcar.com/build/98e56e8b0b91e8806885a22ac2bf69a7.png"
+                    alt="ZOOMCAR"></a>
+        </div>
+        <div>
+            <h2>Become a Host</h2>
+            <h2>ZMS</h2>
+            <div>
+                <a href="signup.html">
+                    <h2>Signup</h2>
+                </a>
+                <a href="login.html">
+                    <h2>Login</h2>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="byCard">
+         <h3><i class="fa-regular fa-circle"></i> Credit / Debit / ATM Card</h3>
+         <form action="">
+            <input type="number" id="cardNo" placeholder="Card Number">
+            <input type="text" id="expDate" placeholder="Expiry Date">
+            <input type="number" id="cvv" placeholder="CVV">
+            <input type="submit">
+         </form>
+    </div>
+
+    <div id="upi">
+        <h3><i class="fa-regular fa-circle"></i> UPI</h3>
+        <form action="">
+            <input type="text" id="Id" placeholder="Enter UPI Id">
+            <input type="submit">
+        </form>
+    </div>
 </body>
+
 </html>
+
+<script>
+    let form1 = document.querySelector("#byCard>form")
+    form1.addEventListener("submit", form1data)
+
+    function form1data(event){
+        event.preventDefault()
+
+        let data1 = {
+            card : form1.cardNo.value,
+            exp : form1.expDate.value,
+            cvv : form1.cvv.value 
+        }
+
+        if(data1.card==""||data1.exp==""||data1.cvv==""){
+            alert("Please fill Complete data")
+        }else{
+            document.getElementById("cardNo").value = ""
+            document.getElementById("expDate").value = ""
+            document.getElementById("cvv").value = ""
+            alert("Transaction Completed, Thanks!")
+        }
+    }
+    
+
+    let form2 = document.querySelector("#upi>form")
+    form2.addEventListener("submit",upiData)
+    function upiData(event){
+        event.preventDefault()
+
+        let upiId = form2.Id.value;
+
+        if(upiId==""){
+            alert("Please fill complete data")
+        }else{
+            document.getElementById("Id").value = ""
+            alert("Transaction Completed, Thanks!")
+        }
+    }
+</script>
