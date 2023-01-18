@@ -4,11 +4,11 @@ Zoomcar is a car-sharing platform. We can book any car here which are available 
 ![zoomcarHomepage](https://user-images.githubusercontent.com/112634386/213269995-0f33ac6f-86cf-4a10-9060-1a2da0bf426c.png)
 
 
-# Default Plans
-There are some default plans. 
+# Car list
+You can select any car from this list and sort it as per your need and also search it. 
 
 
-![Screenshot (154)](https://user-images.githubusercontent.com/112634386/212719127-4c60e626-3f49-40dc-a099-add253650d7c.png)
+![Screenshot (162)](https://user-images.githubusercontent.com/112634386/213273203-5aab016f-4d02-4b49-97aa-564849356f6a.png)
 
 
 
